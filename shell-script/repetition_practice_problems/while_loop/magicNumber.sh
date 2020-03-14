@@ -22,7 +22,6 @@ do
 			high=$mid
 			;;
 	esac
-	echo $low $high
 	if [ $low -eq $high ] 
 	then
 		echo "your number $low"
