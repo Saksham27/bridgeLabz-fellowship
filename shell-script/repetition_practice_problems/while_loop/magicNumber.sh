@@ -21,6 +21,8 @@ do
 			low=$mid
 			high=$mid
 			;;
+		*)
+			echo "Wrong input"
 	esac
 	if [ $low -eq $high ] 
 	then
