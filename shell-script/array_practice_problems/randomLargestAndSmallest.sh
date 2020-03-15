@@ -14,7 +14,7 @@ function generateRandom() {
 	fi
 }
 
-# generating 10 random and storing them in array
+# generating 10 random and storing them in array and giving second largest and smallest
 for (( i=0; i<10; i++ ))
 do
 	randomArray[i]=$( generateRandom )
