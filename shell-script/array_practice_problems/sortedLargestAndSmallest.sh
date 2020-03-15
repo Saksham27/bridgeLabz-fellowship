@@ -37,7 +37,7 @@ do
 done
 
 # sorting the array
-randomArray=($( sortArray ${randomArray[@]} ))
+sortedArray=($( sortArray ${randomArray[@]} ))
 
-echo Second Largest : ${randomArray[8]}
-echo Second Smallest : ${randomArray[1]}
+echo Second Largest : ${sortedArray[8]}
+echo Second Smallest : ${sortedArray[1]}
