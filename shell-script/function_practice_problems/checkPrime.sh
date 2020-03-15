@@ -5,7 +5,7 @@ function checkPrime() {
 	local count=0
 	for (( i=2; i<$1; i++ ))
 	do
-		if [ $(($1%2)) -eq 0 ]
+		if [ $(($1%$i)) -eq 0 ]
 		then
 			((count++))
 		fi
@@ -32,18 +32,23 @@ function getPalindrome() {
 
 read -p "Enter a number : " num
 isNumPrime=$( checkPrime $num )
-numPalindrome=$( getPalindrome $num )
-isNumPalindromePrime=$( checkPrime $numPalindrome )
+
+# checking if number is prime or not
 if [ $isNumPrime = true ]
 then
 	echo "Number is Prime"
+	numPalindrome=$( getPalindrome $num )
+	isNumPalindromePrime=$( checkPrime $numPalindrome )
+
+	# checking if palindrome is prime or not
+	if [ $isNumPalindromePrime = true ]
+	then
+		echo "Palindrome of number is also Prime"
+	else
+		echo "Palindrome of number is not prime"
+	fi
 else
 	echo "Number is not prime"
 fi
 
-if [ $isNumPalindromePrime = true ]
-then
-	echo "Palindrome of number is also Prime"
-else
-	echo "Palindrome of number is not prime"
-fi
+
