@@ -36,5 +36,10 @@ createArray $n
 # checking user inputted array for triplets adding to zero
 sumToZero ${userArray[@]} arrayLength
 
-# displayin the triplets
-echo triplets with sum to zero are : ${resultArray[@]}
+if [ $length -ne 0 ]
+then
+	# displayin the triplets
+	echo triplets with sum to zero are : ${resultArray[@]}
+else
+	echo "No such triplets which add to zero"
+fi
